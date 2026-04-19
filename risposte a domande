@@ -1,0 +1,16 @@
+1. Come si dichiara una proprietà di una classe (variabile visibile a tutta la classe) in Angular?
+Si dichiara all'interno del corpo della classe (generalmente in alto, prima del costruttore) specificando il nome della proprietà, seguito dai due punti : e dal tipo di dato. Questa tipizzazione forte è offerta da TypeScript.
+Esempio: name: string;
+
+2. Come si dichiara un costruttore?
+Si dichiara utilizzando la parola chiave constructor seguita da parentesi tonde () e parentesi graffe {}. Le istruzioni da eseguire all'avvio andranno dentro le parentesi graffe.
+Esempio: constructor() { }
+
+3. Cos’è un costruttore?
+È un metodo speciale appartenente a una classe che viene eseguito in automatico ogni volta che viene creata una nuova istanza (oggetto) di quella classe. Viene utilizzato principalmente per assegnare i valori iniziali alle proprietà (come fare this.name = 'Felipe';) o, più avanti in Angular, per l'iniezione delle dipendenze (Dependency Injection).
+
+4. Secondo te, quando viene creata l’istanza di una classe Angular?
+L'istanza di un Componente Angular viene creata dal framework nel momento in cui deve essere inserito e visualizzato nel DOM (la pagina web). Nel tuo progetto, questo avviene nell'esatto momento in cui Angular elabora il file app.html e incontra il selettore <app-user-item></app-user-item>. Leggendo quel tag, Angular crea un'istanza della classe UserItemComponent, esegue il suo costruttore e ne disegna il template associato.
+
+5. Come si aggiunge una proprietà (o variabile) al template HTML?
+Per mostrare il valore di una proprietà definita nella classe TypeScript all'interno del file HTML, si utilizza racchiudere il nome della proprietà tra due parentesi graffe {{ }}
